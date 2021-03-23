@@ -22,6 +22,6 @@ async def root():
 ### FastAPI 실행 명령어
 
 ```bash
-uvicorn main:app --reload
+uvicorn --host 0.0.0.0 --reload main:app
 ```
 
