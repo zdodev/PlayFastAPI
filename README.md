@@ -31,9 +31,9 @@ async def root():
 uvicorn --host 0.0.0.0 --reload main:app
 ```
 
----
-
 ## Deploy
+
+---
 
 프로세스 매니저를 통해 배포할 수 있습니다.
 
@@ -67,9 +67,7 @@ supervisorctl start {서비스}   # 서비스를 실행합니다.
 supervisorctl restart {서비스} # 서비스를 재실행합니다.
 ```
 
----
-
-## 참고 URL
+## 
 
 ---
 
