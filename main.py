@@ -1,6 +1,7 @@
+import datetime
 from enum import Enum
 from fastapi import FastAPI
-
+from datetime import  datetime
 
 class ModelName(str, Enum):
     alexnet = "alexnet"
@@ -15,6 +16,10 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
+@app.get("/now")
+async def current_time():
+    date = datetime.now()
+    return {"now": date.strftime("%Y-%m-%dT%H:%M:%S")}
 
 @app.get("/items/{item_id}")
 async def read_item(item_id: int):
